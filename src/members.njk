@@ -1,0 +1,24 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Members{% endblock %}
+
+{% block page_description %}A list of members from the band, Oasis.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Members</h1>
+  <p>Here are the band members of the Oasis nominated to the 2024 Rock and Roll Hall of Fame in Cleveland, Ohio.</p>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for members in oasis.members %}
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ oasis.name }}</h5>
+            <p class="card-text">{{ oasis.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</article>
+{% endblock %}
