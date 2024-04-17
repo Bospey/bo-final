@@ -9,12 +9,11 @@
   <h1>Discography</h1>
   <p>Here are the seven studio albums produced by Oasis:</p>
   <div class="row row-cols-1 row-cols-md-2 g-4">
-    {% for albums in oasis.discography %}
+    {% for discography in oasis.discography %}
       <div class="col">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{ discography.title }}</h5>
-            <img src="../src/img/oasis-members" class="card-image-top">{{ discography.image }}
             <h6 class="card-caption">{{ discography.year }}</h6>
           </div>
         </div>
