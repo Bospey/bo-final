@@ -5,26 +5,21 @@
 {% block page_description %}A list of studio albums by Oasis.{% endblock %}
 
 {% block content %}
-<div class="container">
-  <h1>Main headline here</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-  <h2>Library books loop</h2>
-  <p>This loops through data that came from a Google Docs example.</p>
-  <div class="row">
-    {% for book in library.books %}
+<article class="container">
+  <h1>Discography</h1>
+  <p>Here are the seven studio albums produced by Oasis:</p>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for albums in oasis.discography %}
       <div class="col">
-        <img src="img/{{ book.slug }}.jpg" alt="" class="img-fluid">
-        <h3><a href="books/{{ book.slug }}.html">{{ book.title }}</a></h3>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ discography.title }}</h5>
+            <img src="../src/img/oasis-members" class="card-image-top">{{ discography.image }}
+            <h6 class="card-caption">{{ discography.year }}</h6>
+          </div>
+        </div>
       </div>
-    {% endfor %}
+      {% endfor %}
   </div>
-  <h2>Bookstores loop</h2>
-  <p>This loops through data that came from a Google Sheet example.</p>
-  <hr>
-  {% for store in bookstores.stores %}
-    <h3><a href="{{ store.url }}" target="_blank">{{ store.name }}</a></h3>
-    <p>{{ store.address}}, {{ store.city }}, {{ store.state }} {{ store.zip }}</p>
-    <hr>
-  {% endfor %}
-</div>
+</article>
 {% endblock %}
