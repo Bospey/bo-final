@@ -12,8 +12,8 @@
     {% for members in oasis.members %}
       <div class="col">
         <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">{{ members.name }}</h5>
+          <div class="card-body text-center">
+            <h5><a href="oasis/{{ members-slug }}.html">{{ members.name }}</a></h5>
             <h6 class="card-caption">{{ members.instruments }}</h6>
             <figure class="figure">
               <img src="img/oasis-members/{{ members.image }}" class="figure-img img-fluid">
