@@ -8,15 +8,15 @@
 <article class="container">
   <h1>Members</h1>
   <p>Here are the band members of the Oasis nominated to the 2024 Rock and Roll Hall of Fame in Cleveland, Ohio.</p>
-  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="row row-cols-1 row-cols-md-2 g-4 row-cols-lg-3">
     {% for members in oasis.members %}
       <div class="col">
-        <div class="card">
+        <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">{{ members.name }}</h5>
             <h6 class="card-caption">{{ members.instruments }}</h6>
             <figure class="figure">
-              <img src="img/oasis-members/{{ members.image }}">
+              <img src="img/oasis-members/{{ members.image }}" class="figure-img img-fluid">
             </figure>
           </div>
         </div>
