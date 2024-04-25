@@ -2,17 +2,16 @@
 {% set relative_path = "../" %}
 {% from '_macros/prose.njk' import prose %}
 
-{% block page_title %}{{ headline }}{% endblock %}
+{% block page_title %}{{ name }}{% endblock %}
 
-{% block page_description %}{{ headline }} by Capt. Crit McGillicutty{% endblock %}
+{% block page_description %}{{ name }} Band Biographies {% endblock %}
 
 {% block content %}
   <article class="container">
     <div class="row">
-      <div class="col-sm-8">
-        <h1>{{ headline }}</h1>
-        {{ prose(post) }}
-        <p>{{ oasis }}<p>
+      <div>
+        <h1 class="text-center">{{ name }}</h1>
+        {{ description | safe }}
       </div>
     </div>
   </article>
