@@ -2,22 +2,23 @@
 
 {% block page_title %}Members{% endblock %}
 
-{% block page_description %}A list of members from the band, Oasis.{% endblock %}
+{% block page_description %}A list of members from the band, Oasis{% endblock %}
 
 {% block content %}
 <article class="container">
   <h1>Members</h1>
-  <p>Here are the band members of the Oasis nominated to the 2024 Rock and Roll Hall of Fame in Cleveland, Ohio.</p>
-  <div class="row row-cols-1 row-cols-md-2 g-4 row-cols-lg-3">
+  <p>Here are the members of Oasis nominated to the 2024 Rock and Roll Hall of Fame. Also listed is their duration with the band and the instruments they played.</p>
+  <div class="row row-cols-2 row-cols-md-3 g-4 row-cols-lg-4">
     {% for members in oasis.members %}
       <div class="col">
-        <div class="card h-100">
-          <div class="card-body text-center">
+        <div class="card h-100 border-dark">
+          <div class="card-body text-center bg-light">
             <h5><a href="oasis/{{ members.slug }}.html">{{ members.name }}</a></h5>
-            <h6 class="card-caption">{{ members.instruments }}</h6>
+            <h6 class="card-caption">{{ members.tenure }}</h6>
             <figure class="figure">
               <img src="img/oasis-members/{{ members.image }}" class="figure-img img-fluid">
             </figure>
+            <h6 class="card-caption">{{ members.instruments }}</h6>
           </div>
         </div>
       </div>

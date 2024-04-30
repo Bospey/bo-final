@@ -4,13 +4,15 @@
 
 {% block page_title %}{{ name }}{% endblock %}
 
-{% block page_description %}{{ name }} Band Biographies {% endblock %}
+{% block page_description %}{{ name }}Band Biographies{% endblock %}
 
 {% block content %}
   <article class="container">
     <div class="row">
       <div>
         <h1 class="text-center">{{ name }}</h1>
+        <h6 class="text-center">{{ instruments }}</h6>
+        <h6 class="text-center">Years in Oasis: {{ tenure }}</h6>
         {{ description | safe }}
       </div>
     </div>
